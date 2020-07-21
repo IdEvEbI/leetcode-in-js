@@ -11,19 +11,19 @@
  * @return {number[]}
  */
 var twoSum = function (nums, target) {
-  const firstNums = {}
-  const result = []
+  const map = {}
 
   for (let i = 0, len = nums.length; i < len; i++) {
-    const n = nums[i]
+    const n = nums[i],
+      key = target - n
 
-    if (typeof firstNums[target - n] !== 'undefined') {
-      result.push(firstNums[target - n], i)
+    if (typeof map[key] !== 'undefined' && map[key] !== i) {
+      return [map[key], i]
     }
 
-    firstNums[n] = i
+    map[n] = i
   }
 
-  return result
+  return []
 }
 // @lc code=end
