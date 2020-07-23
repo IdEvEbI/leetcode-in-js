@@ -10,19 +10,23 @@
  * @return {number}
  */
 var lengthOfLongestSubstring = function (s) {
-  let maxLen = 0
+  let maxLen = 0,
+    count = 0
+  let sub = ''
 
-  for (let i = 0, len = s.length; i < len; i++) {
-    let sub = s[i]
-    for (let j = i + 1; j < len; j++) {
-      // 判断字符串中是否包含 [j] 字符
-      if (sub.indexOf(s[j]) >= 0) break
+  for (c of s) {
+    if (sub.indexOf(c) === -1) {
+      sub += c
+      count++
 
-      sub += s[j]
+      maxLen = maxLen < count ? count : maxLen
+    } else {
+      sub += c
+      sub = sub.slice(sub.indexOf(c) + 1)
+      count = sub.length
     }
-
-    if (sub.length > maxLen) maxLen = sub.length
   }
+
   return maxLen
 }
 // @lc code=end
