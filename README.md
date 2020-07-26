@@ -1,6 +1,6 @@
 # leetcode in js
 
-![leetcode](https://files.kf5.com/attachments/download/34474/6948292/0015d00d7f0034f31338ada86a4b8a2/)
+![leetcode](https://idevebi.com/public/leetcode.gif)
 
 Atwood’s Law:
 
