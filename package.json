@@ -1,0 +1,23 @@
+{
+  "name": "leetcode-in-js",
+  "version": "1.0.0",
+  "description": "码不停题",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IdEvEbI/leetcode-in-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IdEvEbI/leetcode-in-js/issues"
+  },
+  "homepage": "https://github.com/IdEvEbI/leetcode-in-js#readme",
+  "dependencies": {
+    "mocha": "^8.2.1"
+  }
+}
