@@ -4,7 +4,8 @@
   "description": "码不停题",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "ava",
+    "coverage": "nyc ava"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,25 @@
     "url": "https://github.com/IdEvEbI/leetcode-in-js/issues"
   },
   "homepage": "https://github.com/IdEvEbI/leetcode-in-js#readme",
-  "dependencies": {
-    "mocha": "^8.2.1"
+  "devDependencies": {
+    "@ava/babel": "^1.0.1",
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/register": "^7.12.1",
+    "ava": "^3.13.0",
+    "nyc": "^15.1.0"
+  },
+  "ava": {
+    "files": [
+      "test/*.js"
+    ],
+    "require": [
+      "@babel/register"
+    ],
+    "babel": {
+      "testOptions": {
+        "babelrc": true
+      }
+    }
   }
 }
