@@ -9,4 +9,8 @@ test('移动零', t => {
   nums = [0, 0, 0, 1];
   mod.moveZeroes(nums);
   t.deepEqual(nums, [1, 0, 0, 0]);
+
+  nums = [1, 0, 3, 0, 21];
+  mod.moveZeroes(nums);
+  t.deepEqual(nums, [1, 3, 21, 0, 0]);
 })
