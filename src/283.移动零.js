@@ -43,8 +43,9 @@ var moveZeroes = function (nums) {
     if (nums[i] !== 0) {
       nums[index++] = nums[i];
 
-      if (index != i + 1)
+      if (index !== i + 1) {
         nums[i] = 0;
+      }
     }
   }
 };
