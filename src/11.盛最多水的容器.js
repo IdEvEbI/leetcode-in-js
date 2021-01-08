@@ -90,4 +90,4 @@ var maxArea = function (height) {
 let r = maxArea([1, 2, 1]);
 console.log(r);
 
-// export default { maxArea };
+export default { maxArea };
