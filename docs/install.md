@@ -25,13 +25,21 @@
      browser: true
      es2021: true
      node: true
+   extends:
+     - 'plugin:@typescript-eslint/recommended'
+   parser: '@typescript-eslint/parser'
    parserOptions:
      ecmaVersion: 12
-     sourceType: module
-   rules: {
-     'semi': [error, 'never'],
-     'quotes': [error, 'single']
-   }
+     sourceType: moudle
+   plugins:
+     - '@typescript-eslint'
+   rules:
+     quotes:
+       - error
+       - single
+     semi:
+       - error
+       - never
    ```
 
 4. 安装 [jest](https://jestjs.io/)
@@ -85,7 +93,7 @@
 
    ```js
    "scripts": {
-     "lint": "eslint src --ext .js",
+     "lint": "eslint src --ext .js,.ts",
      "test": "jest",
      "coverage": "jest --coverage",
      "commit": "cz"

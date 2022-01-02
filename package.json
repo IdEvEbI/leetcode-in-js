@@ -12,7 +12,7 @@
     "algorithm"
   ],
   "scripts": {
-    "lint": "eslint src --ext .js",
+    "lint": "eslint src --ext .js,.ts",
     "test": "jest",
     "coverage": "jest --coverage",
     "commit": "cz"
@@ -30,6 +30,8 @@
     "@babel/preset-env": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
     "@types/jest": "^27.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
     "babel-jest": "^27.4.5",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "3.3.0",
