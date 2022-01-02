@@ -1,6 +1,6 @@
 # 项目环境准备
 
-重新调整了一下 `leetcode-in-js` 仓库，配置了 `eslint`、`jtest`、`commitizen` 和 `husky`，目的只有一个，给自己一个好的工作环境，每天进步一点点。
+重新调整了一下 `leetcode-in-js` 仓库，配置了 `eslint`、`jtest`、`commitizen` 和 `husky`，目的只有一个：**给自己一个好的工作环境，每天进步一点点**。
 
 具体操作步骤如下：
 
