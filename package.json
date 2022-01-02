@@ -1,0 +1,47 @@
+{
+  "name": "leetcode-in-js",
+  "version": "1.0.0",
+  "description": "码不停题",
+  "main": "src/index.js",
+  "author": "壹刀流 <idevebi@163.com>",
+  "license": "MIT",
+  "keywords": [
+    "leetcode",
+    "javascript",
+    "data structure",
+    "algorithm"
+  ],
+  "scripts": {
+    "lint": "eslint src --ext .js",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "commit": "cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IdEvEbI/leetcode-in-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IdEvEbI/leetcode-in-js/issues"
+  },
+  "homepage": "https://github.com/IdEvEbI/leetcode-in-js#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "babel-jest": "^27.4.5",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "husky": "^7.0.4",
+    "jest": "^27.4.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

@@ -1,2 +1,5 @@
-# leetcode-in-js
-码不停题
+# leetcode in js
+
+Atwood’s Law:
+
+> Any application that can be written in JavaScript, will eventually be written in JavaScript.
