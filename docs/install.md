@@ -107,5 +107,6 @@
 
     npx husky install
 
+    npx husky add .husky/pre-commit "yarn lint"
     npx husky add .husky/pre-commit "yarn test"
     ```
