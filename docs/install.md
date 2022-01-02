@@ -42,19 +42,32 @@
    yarn add -D babel-jest @babel/core @babel/preset-env
    ```
 
-5. 新建 `babel.config.js`
+5. 安装 [typescript](https://www.typescriptlang.org/)
+
+   ```bash
+   yarn add -D typescript
+
+   yarn add -D @babel/preset-typescript @types/jest
+
+   npx tsc --init
+   ```
+
+6. 新建 `babel.config.js`
 
    ```js
    module.exports = {
-     presets: [['@babel/preset-env',
-       {
-         targets: { node: 'current' }
-       }
-     ]],
+     presets: [
+       ['@babel/preset-env',
+         {
+           targets: { node: 'current' }
+         }
+       ],
+       '@babel/preset-typescript',
+     ],
    }
    ```
 
-6. 安装 [commitizen](https://github.com/commitizen/cz-cli)
+7. 安装 [commitizen](https://github.com/commitizen/cz-cli)
 
    ```bash
    yarn add -D commitizen
@@ -62,13 +75,13 @@
    npx commitizen init cz-conventional-changelog --yarn --dev --exact
    ```
 
-7. 生成 `.gitignore` 内容
+8. 生成 `.gitignore` 内容
 
    ```bash
    echo 'node_modules\ncoverage' >> .gitignore
    ```
 
-8. 修改 `package.json` 添加 `scripts`
+9. 修改 `package.json` 添加 `scripts`
 
    ```js
    "scripts": {
@@ -79,12 +92,12 @@
    }
    ```
 
-9. 安装 [husky](https://github.com/typicode/husky)
+10. 安装 [husky](https://github.com/typicode/husky)
 
-   ```bash
-   yarn add -D husky
+    ```bash
+    yarn add -D husky
 
-   npx husky install
+    npx husky install
 
-   npx husky add .husky/pre-commit "yarn test"
-   ```
+    npx husky add .husky/pre-commit "yarn test"
+    ```
