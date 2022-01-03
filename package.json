@@ -12,7 +12,7 @@
     "algorithm"
   ],
   "scripts": {
-    "lint": "eslint src --ext .js,.ts",
+    "lint": "eslint src --ext .js,.ts && eslint test --ext .js,.ts",
     "test": "jest",
     "coverage": "jest --coverage",
     "commit": "cz"
