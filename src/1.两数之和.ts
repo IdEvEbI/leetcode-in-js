@@ -7,7 +7,7 @@
 // @lc code=start
 function twoSum(nums: number[], target: number): number[] {
   const obj: {
-    [v: number]: number;
+    [v: number]: number
   } = {}
 
   for (let i = 0; i < nums.length; i++) {
@@ -23,4 +23,4 @@ function twoSum(nums: number[], target: number): number[] {
 }
 // @lc code=end
 
-export { twoSum}
+export { twoSum }
