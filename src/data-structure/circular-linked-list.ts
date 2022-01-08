@@ -116,4 +116,3 @@ cl.createCircularListWithArray([1, 2, 3, 4], 1)
 // cl.head = new ListNode(3)
 
 // console.log(cl.toString())
-console.log('over')
