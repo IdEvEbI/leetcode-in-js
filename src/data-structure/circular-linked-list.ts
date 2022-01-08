@@ -12,7 +12,17 @@ export class LinkedList {
   count = 0
   head: ListNode | null
 
-  constructor(nums: number[], pos: number) {
+  constructor() {
+    this.head = null
+  }
+
+  /**
+   * 创建环形链表链表
+   * @param nums 链表使用的数组
+   * @param pos 链表尾连接到链表中的位置（索引从 0 开始）
+   * @returns
+   */
+  createCircularListWithArray(nums: number[], pos: number) {
     this.head = new ListNode()
 
     if (nums.length === 0) {
@@ -60,6 +70,26 @@ export class LinkedList {
   }
 
   /**
+   * 返回链表对应的数组
+   */
+  toArray() {
+    const res: number[] = []
+
+    if (this.head === null) {
+      return res
+    }
+
+    let h: ListNode | null = this.head
+
+    for (let i = 0; i < this.size() && h; i++) {
+      res.push(h.val)
+      h = h.next
+    }
+
+    return res
+  }
+
+  /**
    * 表示指定的链表及其元素。
    * @returns 返回一个链表描述字符串。
    */
@@ -81,5 +111,9 @@ export class LinkedList {
   }
 }
 
-const cl = new LinkedList([1, 2, 3, 4], 1)
-console.log(cl.toString())
+const cl = new LinkedList()
+cl.createCircularListWithArray([1, 2, 3, 4], 1)
+// cl.head = new ListNode(3)
+
+// console.log(cl.toString())
+console.log('over')
