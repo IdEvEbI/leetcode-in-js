@@ -53,7 +53,7 @@
 5. 安装 [typescript](https://www.typescriptlang.org/)
 
    ```bash
-   yarn add -D typescript
+   yarn add -D typescript ts-node
 
    yarn add -D @babel/preset-typescript @types/jest
 
