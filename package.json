@@ -1,10 +1,13 @@
 {
   "name": "leetcode-in-js",
   "version": "1.0.0",
-  "description": "码不停题",
+  "description": "码不停题 - leetcode",
   "main": "src/index.js",
   "author": "壹刀流 <idevebi@163.com>",
   "license": "MIT",
+  "repository": "git+https://github.com/IdEvEbI/leetcode-in-js.git",
+  "bugs": "https://github.com/IdEvEbI/leetcode-in-js/issues",
+  "homepage": "https://github.com/IdEvEbI/leetcode-in-js#readme",
   "keywords": [
     "leetcode",
     "javascript",
@@ -17,14 +20,6 @@
     "coverage": "jest --coverage",
     "commit": "cz"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/IdEvEbI/leetcode-in-js.git"
-  },
-  "bugs": {
-    "url": "https://github.com/IdEvEbI/leetcode-in-js/issues"
-  },
-  "homepage": "https://github.com/IdEvEbI/leetcode-in-js#readme",
   "devDependencies": {
     "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
