@@ -15,9 +15,9 @@
     "algorithm"
   ],
   "scripts": {
-    "lint": "eslint src --ext .js,.ts && eslint test --ext .js,.ts",
+    "lint": "eslint -f unix \"src/**/*.{ts,tsx}\"",
     "test": "jest",
-    "coverage": "jest --coverage",
+    "test:coverage": "jest --coverage",
     "commit": "cz"
   },
   "devDependencies": {
