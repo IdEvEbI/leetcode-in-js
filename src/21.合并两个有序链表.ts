@@ -4,7 +4,7 @@
  * [21] 合并两个有序链表
  */
 
-import { ListNode } from './data-structure/circular-linked-list'
+import { ListNode } from './data-structure/models/linked-list'
 
 // @lc code=start
 /**

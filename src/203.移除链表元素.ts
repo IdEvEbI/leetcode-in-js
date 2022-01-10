@@ -4,7 +4,7 @@
  * [203] 移除链表元素
  */
 
-import { ListNode } from './data-structure/circular-linked-list'
+import { ListNode } from './data-structure/models/linked-list'
 
 // @lc code=start
 /**

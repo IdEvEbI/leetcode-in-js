@@ -1,38 +1,44 @@
-import { LinkedList } from '../src/data-structure/circular-linked-list'
+import { LinkedList } from '../src/data-structure/linked-list'
 import { mergeTwoLists } from '../src/21.合并两个有序链表'
 
 test('l1 = [1, 2, 4], l2 = [1, 3, 4] result is [1, 1, 2, 3, 4, 4]', () => {
-  const ln1 = new LinkedList()
-  const ln2 = new LinkedList()
-  ln1.createCircularListWithArray([1, 2, 4], -1)
-  ln2.createCircularListWithArray([1, 3, 4], -1)
+  const ln1 = createLinkedList([1, 2, 4])
+  const ln2 = createLinkedList([1, 3, 4])
 
-  ln1.head = mergeTwoLists(ln1.head, ln2.head)
-  ln1.count = 6
+  let r = mergeTwoLists(ln1.head, ln2.head)
 
-  expect(ln1.toArray()).toEqual([1, 1, 2, 3, 4, 4])
+  for (const v of [1, 1, 2, 3, 4, 4]) {
+    expect(r?.val).toEqual(v)
+    r = r?.next ?? null
+  }
 })
 
 test('l1 = [], l2 = [] result is []', () => {
-  const ln1 = new LinkedList()
-  const ln2 = new LinkedList()
-  ln1.createCircularListWithArray([], -1)
-  ln2.createCircularListWithArray([], -1)
+  const ln1 = createLinkedList([])
+  const ln2 = createLinkedList([])
 
-  ln1.head = mergeTwoLists(ln1.head, ln2.head)
-  ln1.count = 0
+  const r = mergeTwoLists(ln1.head, ln2.head)
 
-  expect(ln1.toArray()).toEqual([])
+  expect(r?.val).toBeUndefined()
+  expect(r?.next).toBeUndefined()
 })
 
 test('l1 = [], l2 = [0] result is []', () => {
-  const ln1 = new LinkedList()
-  const ln2 = new LinkedList()
-  ln1.createCircularListWithArray([], -1)
-  ln2.createCircularListWithArray([0], -1)
+  const ln1 = createLinkedList([])
+  const ln2 = createLinkedList([0])
 
-  ln1.head = mergeTwoLists(ln1.head, ln2.head)
-  ln1.count = 1
+  const r = mergeTwoLists(ln1.head, ln2.head)
 
-  expect(ln1.toArray()).toEqual([0])
+  expect(r?.val).toBe(0)
+  expect(r?.next).toBeNull()
 })
+
+function createLinkedList(arr: number[]) {
+  const ln = new LinkedList()
+
+  for (const v of arr) {
+    ln.push(v)
+  }
+
+  return ln
+}
