@@ -1,10 +1,10 @@
 import { ListNode } from './models/linked-list'
 
-export class LinkedList<T> {
+export class LinkedList {
   private _count = 0
-  head: ListNode<T> | null = null
+  head: ListNode | null = null
 
-  push(val: T) {
+  push(val: number) {
     const n = new ListNode(val)
 
     if (this.head === null) {
@@ -21,7 +21,7 @@ export class LinkedList<T> {
     this._count++
   }
 
-  insert(val: T, pos: number): boolean {
+  insert(val: number, pos: number): boolean {
     if (pos < 0 || pos >= this._count) {
       return false
     }
@@ -53,7 +53,7 @@ export class LinkedList<T> {
     return h
   }
 
-  indexOf(val: T) {
+  indexOf(val: number) {
     let h = this.head
 
     for (let i = 0; i < this.size() && h != null; i++) {
@@ -88,7 +88,7 @@ export class LinkedList<T> {
     return h?.val
   }
 
-  remove(val: T) {
+  remove(val: number) {
     return this.removeAt(this.indexOf(val))
   }
 

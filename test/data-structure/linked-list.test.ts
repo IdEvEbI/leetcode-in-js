@@ -1,6 +1,6 @@
 import { LinkedList } from '../../src/data-structure/linked-list'
 
-const ln = new LinkedList<number>()
+const ln = new LinkedList()
 
 test('test isEmpty: 新链表不为空', () => {
   expect(ln.isEmpty()).toBeTruthy()
